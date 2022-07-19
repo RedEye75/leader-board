@@ -115,6 +115,7 @@ span {
 .last {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 .course-author {
@@ -124,13 +125,62 @@ span {
 
 .course-duration {
     color: crimson;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
-    background-color: rgb(218, 176, 184);
+    background-color: #FEE5DF;
 
     height: 20px;
     width: 57px;
 
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 5px 15px;
+
+}
+
+/* media queries  */
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+    }
+
+}
+
+/* for tablet devices  */
+
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.courses {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.player,
+.blog,
+.course {
+    flex-direction: column;
+}
+
 
 }
